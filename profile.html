@@ -15,15 +15,15 @@
 <body>
   <div class="container">
 
-  	<div class="row">
-	  <div class="col-xs-12">
-	  	<div class="page-header">
-	  		<h1>Profile</h1>
-	  	</div>
-	  </div>
+    <div class="row">
+	    <div class="col-xs-12">
+	    	<div class="page-header">
+	        	<h1>Profile</h1>
+	    	</div>
+		</div>
 	</div>
 
-	<div class="row">
+  	<div class="row">
 		<div class="col-xs-12">
 		  <div class="navbar navbar-default">
 		  	<div class="container-fluid">
@@ -41,12 +41,12 @@
 						    <li><a href="currentDeals.html">Current Deals</a></li>
 						    <li><a href="profile.html">Profile</a></li>
 						    <li><a href="about.html">About</a></li>
-						    <li><a href="logout.html">Logout</a></li>
+						    <li><a href="login.html">Logout</a></li>
 						  </ul>
 						</div>
 					</li>
-			  		<li><a href="homepage.html"><span class="glyphicon glyphicon-home"></span></a></li>
-			  		<li class="active"><a href="profile.html"><span class="glyphicon glyphicon-user"></span></a></li>
+			  		<li class="active"><a href="homepage.html"><span class="glyphicon glyphicon-home"></span></a></li>
+			  		<li><a href="profile.html"><span class="glyphicon glyphicon-user"></span></a></li>
 			  		<li class="pull-right">
 			  			<a href="myChart.html">
 			  				Cart&nbsp;&nbsp;&nbsp;&nbsp;$10&nbsp;&nbsp;&nbsp;&nbsp;
@@ -59,41 +59,35 @@
 		</div>
 	</div>
 
-	<div class="row">
-		<div class="col-sm-9 col-xs-12">
-		  <div class="main">
-		  	<p>
-		  		Here it the main content of my web page:
-		  		<br>
-		  		I am a senior computer engineering student who likes to play volleyball.
-		  	</p>
-		  </div>
-		</div>
-		<div class="col-sm-3 col-xs-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4>This is a story all about how my life got flip-turned upside down:</h4>
-				</div>
-				<div class="panel-body">
-					<p>
-						I don't know what to say.
-						<br>
-						Do what you do best.... better.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-xs-sm">
-		  <div class="panel panel-default">
-		  	<div class="panel-body">
-		  		<h4>Fall 2015 Human Computer Interaction</h1>
-		  	</div>
-		  </div>
-		</div>
-	</div>
+  <div class="row">
+    <form class="form-horizontal" role="form">
+      <div class="col-xs-6">
+	    <label class="control-label" for="name">Family Members:</label><br>
+	    <h4>Kaitlyn</h4>
+	    &nbsp;&nbsp;&nbsp;-Vegan
+	    <h4>Laura</h4>
+	    &nbsp;&nbsp;&nbsp;-Gluten Intolerant
+	    <br><br><br>
+		<a href="registration.html" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span>Add Family Member</a><br>
+      </div>
+      <div class="col-xs-6">
+      	<div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <label for="age">Preferred Grocery Store:</label>
+            <div class="checkbox">  
+              <input type="radio" name="age" value="closest">Always Closest<br>
+              <input type="radio" name="age" value="cheapest">Always Cheapest<br>
+              <input type="radio" name="age" value="preferred">Select Preferred<br>
+            </div>
+          </div>
+        </div>
+        <div class="form-group"> 
+          <div class="col-sm-offset-2 col-sm-10">
+            <a href="homepage.html" class="btn btn-default">Home</a><br>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
 
 </body>
