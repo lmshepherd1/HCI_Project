@@ -7,7 +7,7 @@
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="javascript/homepage.js"></script>
-<!-- It should contain a header, menu bar, footer, and main area of content at least. Since I don't expect styling, it should not look good at this point (that's your next assignment!) -->
+<link rel="stylesheet" href="css/default.css"></link>
 
 <html lang="en">
 
@@ -15,18 +15,34 @@
   <meta charset="utf-8">
   <title>Good 4 U+I</title>
   <title>jQuery UI Tabs - Default functionality</title>
+
+
+
+<!-- THIS SHOULD BE IN AN EXTERNAL STYLE SHEET -->
+    <style type="text/css">
+		.imagewrap {display:inline-block;position:relative;padding: 25px;}
+		.heart {position:absolute;top:25px;right:75px;}
+		.plus {position:absolute;top:25px;right:25px;}
+		img#preview{
+			outline-style: solid;
+			outline-color: gray;
+		}
+	</style>
+
+
+
 </head>
 
 <body>
   <div class="container">
 
-  	<div class="row">
+<!--   	<div class="row">
 	  <div class="col-xs-12">
 	  	<div class="page-header">
 	  		<h1>Homepage</h1>
 	  	</div>
 	  </div>
-	</div>
+	</div> -->
 
 	<div class="row">
 		<div class="col-xs-12">
@@ -65,15 +81,107 @@
 	</div>
 
 	<div class="row">
-		<div class="col-sm-9 col-xs-12">
+		<div class="col-sm-12 col-xs-12">
 		  <div id="tabs">
 			  <ul>
 			    <li><a href="#tabs-1">Popular</a></li>
 			    <li><a href="#tabs-2">Favorites</a></li>
 			    <li><a href="#tabs-3">Current Deals</a></li>
 			  </ul>
+			  <div class="pull-right search-bar">
+			  		<input type="text" name="search-criteria">
+			  		<button class="btn btn-default" type="button" id="search">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+			  </div>
 			  <div id="tabs-1">
-			    <p>This is where the most popular current recipes go!</p>
+			    <a href="detailedView.html">Detailed View</a>
+			    <br>
+			    <br>
+			    <div class="images" style="height: 570px; overflow : auto; "</div>
+
+					<div class="imagewrap">
+					    <img id="preview" src="images/chicken.jpg" alt="Chicken" style="width:304px;height:228px;">
+					    <button class="btn btn-default heart" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="imagewrap">
+					    <img id="preview" src="images/chocolate-cake.jpg" alt="Cake" style="width:304px;height:228px;">
+					    <button class="btn btn-default heart" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="imagewrap">
+					    <img id="preview" src="images/greek-pasta-salad.jpg" alt="Salad" style="width:304px;height:228px;">
+					    <button class="btn btn-default heart" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="imagewrap">
+					    <img id="preview" src="images/hot-roast-beef-sandwiches.jpg" alt="Sandwich" style="width:304px;height:228px;">
+					    <button class="btn btn-default heart" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="imagewrap">
+					    <img id="preview" src="images/mexican-casserole.jpg" alt="Casserole" style="width:304px;height:228px;">
+					    <button class="btn btn-default heart" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="imagewrap">
+					    <img id="preview" src="images/pizza.jpg" alt="Pizza" style="width:304px;height:228px;">
+					    <button class="btn btn-default heart" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="imagewrap">
+					    <img id="preview" src="images/popcorn-shrimp.jpg" alt="Shrimp" style="width:304px;height:228px;">
+					    <button class="btn btn-default heart" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="imagewrap">
+					    <img id="preview" src="images/soup.jpg" alt="Soup" style="width:304px;height:228px;">
+					    <button class="btn btn-default heart" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="imagewrap">
+					    <img id="preview" src="images/salmon.jpg" alt="Salmon" style="width:304px;height:228px;">
+					    <button class="btn btn-default heart" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+				</div>
 			  </div>
 			  <div id="tabs-2">
 			    <p>This is where your favorites go. </p>
@@ -81,20 +189,6 @@
 			  <div id="tabs-3">
 			    <p>All da sales stuffs go here</p>
 			  </div>
-			</div>
-		</div>
-		<div class="col-sm-3 col-xs-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4>This is a story all about how my life got flip-turned upside down:</h4>
-				</div>
-				<div class="panel-body">
-					<p>
-						I don't know what to say.
-						<br>
-						Do what you do best.... better.
-					</p>
-				</div>
 			</div>
 		</div>
 	</div>

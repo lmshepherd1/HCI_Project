@@ -3,13 +3,19 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></link>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css"</link>
-<!-- It should contain a header, menu bar, footer, and main area of content at least. Since I don't expect styling, it should not look good at this point (that's your next assignment!) -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="javascript/homepage.js"></script>
+<script src="javascript/detailedView.js"></script>
+<link rel="stylesheet" href="css/default.css"></link>
 
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <title>Good 4 U+I</title>
+  <title>jQuery UI Tabs - Default functionality</title>
 </head>
 
 <body>
@@ -18,7 +24,7 @@
   	<div class="row">
 	  <div class="col-xs-12">
 	  	<div class="page-header">
-	  		<h1>My Cart</h1>
+	  		<h1>Detailed View</h1>
 	  	</div>
 	  </div>
 	</div>
@@ -47,7 +53,7 @@
 					</li>
 			  		<li><a href="homepage.html"><span class="glyphicon glyphicon-home"></span></a></li>
 			  		<li><a href="profile.html"><span class="glyphicon glyphicon-user"></span></a></li>
-			  		<li class="active pull-right">
+			  		<li class="pull-right">
 			  			<a href="myCart.html">
 			  				Cart&nbsp;&nbsp;&nbsp;&nbsp;$10&nbsp;&nbsp;&nbsp;&nbsp;
 			  				<meter min="0" low="10" optimum="50" high="90" max="100" value="20"></meter>
@@ -60,27 +66,53 @@
 	</div>
 
 	<div class="row">
-		<div class="col-sm-9 col-xs-12">
-		  <div class="main">
-		  	<p>
-		  		Here it the main content of my web page:
-		  		<br>
-		  		I am a senior computer engineering student who likes to play volleyball.
-		  	</p>
-		  </div>
-		</div>
-		<div class="col-sm-3 col-xs-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4>This is a story all about how my life got flip-turned upside down:</h4>
+		<div class="col-xs-12">
+			<div class="row">
+				<div class="col-xs-8">
+					<div class="generalInformation">
+						<span>Cart</span>&nbsp;&nbsp;&nbsp;&nbsp;
+						<span id="cost">$10</span>&nbsp;&nbsp;&nbsp;&nbsp;
+			  			<meter min="0" low="10" optimum="50" high="90" max="100" value="80"></meter>
+					</div>
+					<br>
+					<h3>Ingredients</h3>
+					<div class="ingredients">
+						<table>
+							<tr>
+								<th>Amount</th>
+								<th>Measurement</th>
+								<th>Ingredient</th>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Tbsp</td>
+								<td>olive oil</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>boneless breasts</td>
+								<td>chicken</td>
+							</tr>
+						</table>
+					</div>
 				</div>
-				<div class="panel-body">
-					<p>
-						I don't know what to say.
-						<br>
-						Do what you do best.... better.
-					</p>
+				<div class="col-xs-4">
+					<img id="preview" src="images/chicken.jpg" alt="Mountain View" style="width:304px;height:228px;">
+					<br>
+					<br>
+					<form id='myform' method='POST' action='#'>
+						<h4>Servings: </h4>
+					    <input type='button' value='-' class='qtyminus' field='quantity' />
+					    <input type='text' name='quantity' value='1' class='qty' />
+					    <input type='button' value='+' class='qtyplus' field='quantity' />
+					</form>
 				</div>
+			</div>
+			<div class="row">
+				<h3 id="description">Description</h2>
+				<p id="description">
+					This chicken dish is great for the whole family. Double the recipe for a recipe of 4! If you believe in chicken freedom then I recommend free-range chicken. they were raised in an open field of daisys and are guarenteed to have smiled at least three times every day for the duration of their lives. Unfortunately, their lives were short obviously. Because we killed them so you could eat them. But all in the name of this recipe, the chickens lived a decent life. Are you free range?
+				</p>
 			</div>
 		</div>
 	</div>
