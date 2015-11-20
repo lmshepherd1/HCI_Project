@@ -27,6 +27,9 @@
 			outline-style: solid;
 			outline-color: gray;
 		}
+		img#preview{
+			width:304px;height:228px;
+		}
 	</style>
 
 
@@ -95,13 +98,15 @@
 					</button>
 			  </div>
 			  <div id="tabs-1">
-			    <a href="detailedView.html">Detailed View</a>
 			    <br>
 			    <br>
 			    <div class="images" style="height: 570px; overflow : auto; "</div>
 
 					<div class="imagewrap">
-					    <img id="preview" src="images/chicken.jpg" alt="Chicken" style="width:304px;height:228px;">
+					    <img id="preview" src="images/chicken.jpg" alt="Chicken" usemap="#previewmap">
+					    <map name="previewmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView.html">
+						</map>
 					    <button class="btn btn-default heart" type="button" id="favorite">
 						    <span class="glyphicon glyphicon-heart"></span>
 						</button>
@@ -109,6 +114,7 @@
 						    <span class="glyphicon glyphicon-plus"></span>
 						</button>
 					</div>
+
 					<div class="imagewrap">
 					    <img id="preview" src="images/chocolate-cake.jpg" alt="Cake" style="width:304px;height:228px;">
 					    <button class="btn btn-default heart" type="button" id="favorite">
