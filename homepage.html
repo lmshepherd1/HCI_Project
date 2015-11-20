@@ -35,7 +35,10 @@
 
 	<script>
 	function searchChicken() {
-	    $('.not-chicken').css('display', 'none')
+		if($('.search-input').val() == 'chicken')
+		{
+			$('.not-chicken').css('display', 'none')
+		}
 	}
 	function cancelSearch() {
 		$('.search-input').val('')
