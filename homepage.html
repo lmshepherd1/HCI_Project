@@ -42,8 +42,10 @@
 	    $('.not-chicken').css('display', 'inline-block')
 	}
 	function addToFavorite(imgToShow) {
-		console.log(imgToShow.id)
 		$('.'+imgToShow.id).css('display', 'inline-block')
+	}
+	function removeFavorite(imgToShow) {
+		$('.'+imgToShow.id).css('display', 'none')
 	}
 	</script>
 
@@ -242,111 +244,76 @@
 					    <map name="previewmap">
 						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView.html">
 						</map>
-					    <button class="btn btn-default heart" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-heart"></span>
-						</button>
-						<button class="btn btn-default plus" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-plus"></span>
+						<button class="btn btn-default plus" type="button" onclick="removeFavorite(this)"  id="favoriteChicken">
+						    <span class="glyphicon glyphicon-remove"></span>
 						</button>
 					</div>
 
 					<div class="favorite imagewrap not-chicken favoriteCake">
-					    <img id="preview" src="images/chocolate-cake.jpg" alt="Cake" style="width:304px;height:228px;">
-					    <button class="btn btn-default heart" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-heart"></span>
-						</button>
-						<button class="btn btn-default plus" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-plus"></span>
+					    <img id="preview" src="images/chocolate-cake.jpg" alt="Cake">
+						<button class="btn btn-default plus" type="button" onclick="removeFavorite(this)">
+						    <span class="glyphicon glyphicon-remove"></span>
 						</button>
 					</div>
 					<div class="favorite imagewrap not-chicken favoriteSalad">
 					    <img id="preview" src="images/greek-pasta-salad.jpg" alt="Salad" style="width:304px;height:228px;">
-					    <button class="btn btn-default heart" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-heart"></span>
-						</button>
-						<button class="btn btn-default plus" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-plus"></span>
+					    <button class="btn btn-default heart" type="button">
+						<button class="btn btn-default plus" type="button" onclick="removeFavorite(this)" id="favoriteSalad">
+						    <span class="glyphicon glyphicon-remove"></span>
 						</button>
 					</div>
 					<div class="favorite imagewrap chicken favoriteEnchilada">
-					    <img id="preview" src="images/chicken-enchilada.jpg" alt="Enchilada" style="width:304px;height:228px;">
-					    <button class="btn btn-default heart" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-heart"></span>
-						</button>
-						<button class="btn btn-default plus" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-plus"></span>
+					    <img id="preview" src="images/chicken-enchilada.jpg" alt="Enchilada"?
+						<button class="btn btn-default plus" type="button" onclick="removeFavorite(this)" id="favoriteEnchilada">
+						    <span class="glyphicon glyphicon-remove"></span>
 						</button>
 					</div>
 					<div class="favorite imagewrap not-chicken favoriteSandwich">
-					    <img id="preview" src="images/hot-roast-beef-sandwiches.jpg" alt="Sandwich" style="width:304px;height:228px;">
-					    <button class="btn btn-default heart" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-heart"></span>
-						</button>
-						<button class="btn btn-default plus" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-plus"></span>
+					    <img id="preview" src="images/hot-roast-beef-sandwiches.jpg" alt="Sandwich">
+						<button class="btn btn-default plus" type="button" onclick="removeFavorite(this)" id="favoriteSandwich">
+						    <span class="glyphicon glyphicon-remove"></span>
 						</button>
 					</div>
 					<div class="favorite imagewrap not-chicken favoriteCasserole">
-					    <img id="preview" src="images/mexican-casserole.jpg" alt="Casserole" style="width:304px;height:228px;">
-					    <button class="btn btn-default heart" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-heart"></span>
-						</button>
-						<button class="btn btn-default plus" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-plus"></span>
+					    <img id="preview" src="images/mexican-casserole.jpg" alt="Casserole">
+						<button class="btn btn-default plus" type="button" onclick="removeFavorite(this)" id="favoriteCasserole">
+						    <span class="glyphicon glyphicon-remove"></span>
 						</button>
 					</div>
 					<div class="favorite imagewrap chicken favoritePotPie">
-					    <img id="preview" src="images/chicken-pot-pie.jpg" alt="PotPie" style="width:304px;height:228px;">
-					    <button class="btn btn-default heart" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-heart"></span>
-						</button>
-						<button class="btn btn-default plus" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-plus"></span>
+					    <img id="preview" src="images/chicken-pot-pie.jpg" alt="PotPie">
+						<button class="btn btn-default plus" type="button" onclick="removeFavorite(this)" id="favoritePotPie">
+						    <span class="glyphicon glyphicon-remove"></span>
 						</button>
 					</div>
 					<div class="favorite imagewrap not-chicken favoritePizza">
-					    <img id="preview" src="images/pizza.jpg" alt="Pizza" style="width:304px;height:228px;">
-					    <button class="btn btn-default heart" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-heart"></span>
-						</button>
-						<button class="btn btn-default plus" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-plus"></span>
+					    <img id="preview" src="images/pizza.jpg" alt="Pizza">
+						<button class="btn btn-default plus" type="button" onclick="removeFavorite(this)" id="favoritePizza">
+						    <span class="glyphicon glyphicon-remove"></span>
 						</button>
 					</div>
 					<div class="favorite imagewrap not-chicken favoriteShrimp">
-					    <img id="preview" src="images/popcorn-shrimp.jpg" alt="Shrimp" style="width:304px;height:228px;">
-					    <button class="btn btn-default heart" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-heart"></span>
-						</button>
-						<button class="btn btn-default plus" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-plus"></span>
+					    <img id="preview" src="images/popcorn-shrimp.jpg" alt="Shrimp">
+						<button class="btn btn-default plus" type="button" onclick="removeFavorite(this)" id="favoriteShrimp">
+						    <span class="glyphicon glyphicon-remove"></span>
 						</button>
 					</div>
 					<div class="favorite imagewrap chicken favoriteWings">
-					    <img id="preview" src="images/chicken-wings.jpg" alt="Wings" style="width:304px;height:228px;">
-					    <button class="btn btn-default heart" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-heart"></span>
-						</button>
-						<button class="btn btn-default plus" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-plus"></span>
+					    <img id="preview" src="images/chicken-wings.jpg" alt="Wings">
+						<button class="btn btn-default plus" type="button" onclick="removeFavorite(this)" id="favoriteWings">
+						    <span class="glyphicon glyphicon-remove"></span>
 						</button>
 					</div>
 					<div class="favorite imagewrap not-chicken favoriteSoup">
-					    <img id="preview" src="images/soup.jpg" alt="Soup" style="width:304px;height:228px;">
-					    <button class="btn btn-default heart" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-heart"></span>
-						</button>
-						<button class="btn btn-default plus" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-plus"></span>
+					    <img id="preview" src="images/soup.jpg" alt="Soup">
+						<button class="btn btn-default plus" type="button" onclick="removeFavorite(this)" id="favoriteSoup">
+						    <span class="glyphicon glyphicon-remove"></span>
 						</button>
 					</div>
 					<div class="favorite imagewrap not-chicken favoriteSalmon">
-					    <img id="preview" src="images/salmon.jpg" alt="Salmon" style="width:304px;height:228px;">
-					    <button class="btn btn-default heart" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-heart"></span>
-						</button>
-						<button class="btn btn-default plus" type="button" id="favorite">
-						    <span class="glyphicon glyphicon-plus"></span>
+					    <img id="preview" src="images/salmon.jpg" alt="Salmon">
+						<button class="btn btn-default plus" type="button" onclick="removeFavorite(this)" id="favoriteSalmon">
+						    <span class="glyphicon glyphicon-remove"></span>
 						</button>
 					</div>
 				</div>
