@@ -32,7 +32,15 @@
 		}
 	</style>
 
-
+	<script>
+	function searchChicken() {
+	    $('.not-chicken').css('display', 'none')
+	}
+	function cancelSearch() {
+		$('.search-input').val('')
+	    $('.not-chicken').css('display', 'inline-block')
+	}
+	</script>
 
 </head>
 
@@ -92,8 +100,11 @@
 			    <li><a href="#tabs-3">Current Deals</a></li>
 			  </ul>
 			  <div class="pull-right search-bar">
-			  		<input type="text" name="search-criteria">
-			  		<button class="btn btn-default" type="button" id="search">
+			  		<button class="btn btn-default" onclick="cancelSearch()" type="button" id="undo-search">
+						<span class="glyphicon glyphicon-remove"></span>
+					</button>
+			  		<input type="text" name="search-criteria" class="search-input">
+			  		<button class="btn btn-default" onclick="searchChicken()" type="button" id="search">
 						<span class="glyphicon glyphicon-search"></span>
 					</button>
 			  </div>
@@ -102,7 +113,7 @@
 			    <br>
 			    <div class="images" style="height: 570px; overflow : auto; "</div>
 
-					<div class="imagewrap">
+					<div class="imagewrap chicken">
 					    <img id="preview" src="images/chicken.jpg" alt="Chicken" usemap="#previewmap">
 					    <map name="previewmap">
 						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView.html">
@@ -115,7 +126,7 @@
 						</button>
 					</div>
 
-					<div class="imagewrap">
+					<div class="imagewrap not-chicken">
 					    <img id="preview" src="images/chocolate-cake.jpg" alt="Cake" style="width:304px;height:228px;">
 					    <button class="btn btn-default heart" type="button" id="favorite">
 						    <span class="glyphicon glyphicon-heart"></span>
@@ -124,7 +135,7 @@
 						    <span class="glyphicon glyphicon-plus"></span>
 						</button>
 					</div>
-					<div class="imagewrap">
+					<div class="imagewrap not-chicken">
 					    <img id="preview" src="images/greek-pasta-salad.jpg" alt="Salad" style="width:304px;height:228px;">
 					    <button class="btn btn-default heart" type="button" id="favorite">
 						    <span class="glyphicon glyphicon-heart"></span>
@@ -133,7 +144,16 @@
 						    <span class="glyphicon glyphicon-plus"></span>
 						</button>
 					</div>
-					<div class="imagewrap">
+					<div class="imagewrap chicken">
+					    <img id="preview" src="images/chicken-enchilada.jpg" alt="Enchilada" style="width:304px;height:228px;">
+					    <button class="btn btn-default heart" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="imagewrap not-chicken">
 					    <img id="preview" src="images/hot-roast-beef-sandwiches.jpg" alt="Sandwich" style="width:304px;height:228px;">
 					    <button class="btn btn-default heart" type="button" id="favorite">
 						    <span class="glyphicon glyphicon-heart"></span>
@@ -142,7 +162,7 @@
 						    <span class="glyphicon glyphicon-plus"></span>
 						</button>
 					</div>
-					<div class="imagewrap">
+					<div class="imagewrap not-chicken">
 					    <img id="preview" src="images/mexican-casserole.jpg" alt="Casserole" style="width:304px;height:228px;">
 					    <button class="btn btn-default heart" type="button" id="favorite">
 						    <span class="glyphicon glyphicon-heart"></span>
@@ -151,7 +171,16 @@
 						    <span class="glyphicon glyphicon-plus"></span>
 						</button>
 					</div>
-					<div class="imagewrap">
+					<div class="imagewrap chicken">
+					    <img id="preview" src="images/chicken-pot-pie.jpg" alt="PotPie" style="width:304px;height:228px;">
+					    <button class="btn btn-default heart" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="imagewrap not-chicken">
 					    <img id="preview" src="images/pizza.jpg" alt="Pizza" style="width:304px;height:228px;">
 					    <button class="btn btn-default heart" type="button" id="favorite">
 						    <span class="glyphicon glyphicon-heart"></span>
@@ -160,7 +189,7 @@
 						    <span class="glyphicon glyphicon-plus"></span>
 						</button>
 					</div>
-					<div class="imagewrap">
+					<div class="imagewrap not-chicken">
 					    <img id="preview" src="images/popcorn-shrimp.jpg" alt="Shrimp" style="width:304px;height:228px;">
 					    <button class="btn btn-default heart" type="button" id="favorite">
 						    <span class="glyphicon glyphicon-heart"></span>
@@ -169,7 +198,16 @@
 						    <span class="glyphicon glyphicon-plus"></span>
 						</button>
 					</div>
-					<div class="imagewrap">
+					<div class="imagewrap chicken">
+					    <img id="preview" src="images/chicken-wings.jpg" alt="Wings" style="width:304px;height:228px;">
+					    <button class="btn btn-default heart" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="imagewrap not-chicken">
 					    <img id="preview" src="images/soup.jpg" alt="Soup" style="width:304px;height:228px;">
 					    <button class="btn btn-default heart" type="button" id="favorite">
 						    <span class="glyphicon glyphicon-heart"></span>
@@ -178,7 +216,7 @@
 						    <span class="glyphicon glyphicon-plus"></span>
 						</button>
 					</div>
-					<div class="imagewrap">
+					<div class="imagewrap not-chicken">
 					    <img id="preview" src="images/salmon.jpg" alt="Salmon" style="width:304px;height:228px;">
 					    <button class="btn btn-default heart" type="button" id="favorite">
 						    <span class="glyphicon glyphicon-heart"></span>
