@@ -47,8 +47,8 @@
 	function addToFavorite(imgToShow) {
 		$('.'+imgToShow.id).css('display', 'inline-block')
 	}
-	function removeFavorite(imgToShow) {
-		$('.'+imgToShow.id).css('display', 'none')
+	function removeFavorite(imgToRemove) {
+		$('.'+imgToRemove.id).css('display', 'none')
 	}
 	</script>
 
@@ -254,13 +254,12 @@
 
 					<div class="favorite imagewrap not-chicken favoriteCake">
 					    <img id="preview" src="images/chocolate-cake.jpg" alt="Cake">
-						<button class="btn btn-default plus" type="button" onclick="removeFavorite(this)">
+						<button class="btn btn-default plus" type="button" onclick="removeFavorite(this)" id="favoriteCake">
 						    <span class="glyphicon glyphicon-remove"></span>
 						</button>
 					</div>
 					<div class="favorite imagewrap not-chicken favoriteSalad">
 					    <img id="preview" src="images/greek-pasta-salad.jpg" alt="Salad" style="width:304px;height:228px;">
-					    <button class="btn btn-default heart" type="button">
 						<button class="btn btn-default plus" type="button" onclick="removeFavorite(this)" id="favoriteSalad">
 						    <span class="glyphicon glyphicon-remove"></span>
 						</button>
